@@ -1,0 +1,101 @@
+UID-AV.SC.U4CSE25223
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: rgb(50, 50, 100);
+    }
+    header {
+      background: #ff4444;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 36px;
+    }
+    nav {
+      background: #0066cc;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #ffff00;
+      margin: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+    }
+    nav a:hover {
+      background: #fff;
+      color: #0066cc;
+      border-radius: 5px;
+    }
+    main {
+      display: flex;
+      padding: 20px;
+    }
+    .login {
+      width: 350px;
+      background: #ffaa00;
+      padding: 15px;
+      border-radius: 10px;
+      color: white;
+    }
+    .login input[type="email"],
+    .login input[type="password"] {
+      width: 90%;
+      padding: 6px;
+      margin: 6px 0;
+    }
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 8px 0;
+    }
+    iframe {
+      flex: 1;
+      margin-left: 20px;
+      height: 520px;
+      border: none;
+      background: #aaffff;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>AMRITA VISHWA VIDHYAPEETAM</header>
+
+  <nav>
+    <a href="amaravati.html" target="campus">AMARAVATI</a>
+    <a href="amritapuri.html" target="campus">AMRITAPURI</a>
+    <a href="bengaluru.html" target="campus">BENGALURU</a>
+    <a href="chennai.html" target="campus">CHENNAI</a>
+    <a href="coimbatore.html" target="campus">COIMBATORE</a>
+    <a href="faridabad.html" target="campus">FARIDABAD</a>
+    <a href="kochi.html" target="campus">KOCHI</a>
+    <a href="mysuru.html" target="campus">MYSURU</a>
+  </nav>
+
+  <main>
+    <div class="login">
+      <h2>Login</h2>
+      Email: <input type="email">
+      Password: <input type="password">
+      <div class="remember">
+        <input type="checkbox">
+        <label>Save me</label>
+      </div>
+      <input type="button" value="Login" style="width:100%;padding:6px;">
+      <br><br>
+      <a href="#">Forgot Password?</a><br>
+      No account? <a href="#">Register</a>
+    </div>
+
+    <iframe name="campus" src="amaravati.html"></iframe>
+  </main>
+</body>
+</html>

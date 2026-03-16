@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    UID-CSE25223
+    <body>
+        <p>P.Akhil</p>
+        <h1 align="center">HTML Forms</h1>
+        <table border="1" cellpadding="10" cellspacing="0" align="center">
+            <tr>
+                <th>Full Name</th>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </td>
+            </tr>
+            <tr>
+                <th>Course Applying for?</th>
+                <td>
+                    <select name="course">
+                        <option value="bt">BTech</option>
+                        <option value="bba">BBA</option>
+                        <option value="mbbs">MBBS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Hobbies</th>
+                <td>
+                    <input type="checkbox" name="hobby" value="sports"> Sports
+                    <input type="checkbox" name="hobby" value="music"> Music
+                    <input type="checkbox" name="hobby" value="reading"> Reading
+                </td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <th>Upload Certificate</th>
+                <td><input type="file" name="certi"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><textarea name="address" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Submit"><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </body>

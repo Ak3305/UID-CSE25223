@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Headphones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="card-img" src="premium.webp" alt="Wireless Over-ear">
+            <h2>PREMIUM OVER-EAR</h2>
+            <p>ANC wireless headphones</p>
+            <p class="price">$149.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="wireless.webp" alt="True Wireless">
+            <h2>TRUE WIRELESS</h2>
+            <p>Compact earbuds with case</p>
+            <p class="price">$79.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="gami.webp" alt="Gaming Headset">
+            <h2>GAMING HEADSET</h2>
+            <p>7.1 surround sound headset</p>
+            <p class="price">$99.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="studio.webp" alt="Studio Headphones">
+            <h2>STUDIO PRO</h2>
+            <p>Professional monitoring headphones</p>
+            <p class="price">$199.99</p>
+        </div>
+    </div>
+</body>
+</html>

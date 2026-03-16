@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+UID-CSE25223
+<html>
+<head>
+    <title>Gadget Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas: 
+                "header header"
+                "sale sale"
+                "sidebar main"
+                "footer footer";
+            gap: 10px;
+            padding: 10px;
+        }
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .sale {
+            grid-area: sale;
+            background-color: #2196F3;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #FFEB3B;
+            padding: 10px;
+        }
+        .main {
+            grid-area: main;
+            background-color: white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #FFC107;
+            padding: 10px;
+            text-align: center;
+        }
+        .product {
+            background-color: #e8f5e8;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product-image {
+            width: 200px;
+            height: 200px;
+        }
+        .button {
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #E64A19;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GADGET HUB</h1>
+        </div>
+        <div class="sale">
+            <p>Special Sale!</p>
+        </div>
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li>Laptops</li>
+                <li>Smartphones</li>
+                <li>Headphones</li>
+                <li>Smart Watches</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="product">
+                <img class="product-image" src="game.webp" alt="Gaming Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>Price: $999.99</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img class="product-image" src="phone.webp" alt="Smartphone">
+                <h3>Flagship Smartphone</h3>
+                <p>Price: $799.99</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img class="product-image" src="wireless.webp" alt="Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Price: $149.99</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img class="product-image" src="watch.webp" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>Price: $199.99</p>
+                <button class="button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; GADGET HUB Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

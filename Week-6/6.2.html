@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GADGET HUB</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            display: grid;
+            grid-template: 
+                "header header" auto
+                "sale sale" auto
+                "sidebar main" 1fr
+                "footer footer" auto / 220px 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+        .header, .sale, .sidebar, .main, .footer {
+            background: rgba(255,255,255,.95);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .header { 
+            grid-area: header; 
+            text-align: center; 
+            font-size: 28px; 
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+        }
+        .sale { 
+            grid-area: sale; 
+            overflow: hidden; 
+            white-space: nowrap; 
+            height: 40px; 
+            position: relative;
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            color: white;
+            font-weight: bold;
+        }
+        .sale p {
+            position: absolute;
+            font-size: 20px;
+            animation: move 10s linear infinite;
+        }
+        @keyframes move {
+            from { left: -100%; }
+            to { left: 100%; }
+        }
+        .sidebar { 
+            grid-area: sidebar;
+            background: linear-gradient(135deg, #FFEB3B, #FF9800);
+        }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { margin: 15px 0; }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            transition: .3s;
+            display: block;
+        }
+        .sidebar a:hover { 
+            color: #2196F3; 
+            padding-left: 8px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 6px;
+        }
+        .main { 
+            grid-area: main; 
+            background: white;
+        }
+        iframe { 
+            width: 100%; 
+            height: 520px; 
+            border: 0; 
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .footer { 
+            grid-area: footer; 
+            text-align: center; 
+            font-size: 14px; 
+            background: linear-gradient(45deg, #FFC107, #FF9800);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">GADGET HUB</div>
+        <div class="sale">
+            <p>🔥 SPECIAL SALE – UP TO 50% OFF ON GADGETS 🔥</p>
+        </div>
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="laptops.html" target="contentFrame">LAPTOPS</a></li>
+                <li><a href="smartphones.html" target="contentFrame">SMARTPHONES</a></li>
+                <li><a href="headphones.html" target="contentFrame">HEADPHONES</a></li>
+                <li><a href="smartwatches.html" target="contentFrame">SMART WATCHES</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <iframe name="contentFrame"></iframe>
+        </div>
+        <div class="footer">© GADGET HUB Website</div>
+    </div>
+</body>
+</html>

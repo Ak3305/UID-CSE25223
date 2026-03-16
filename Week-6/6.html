@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+             
+            background-color: #f4f4f4;
+            margin: 0; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif                                                                                                                                 
+        }
+        .container{
+            display: grid;
+            grid-template-rows:auto auto 1fr auto;
+            grid-template-columns:200px 1fr ; 
+            grid-template-areas: 
+            "header header "
+            "sale sale"
+            "category products"
+            "footer footer";
+            gap: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .header{
+            grid-area: header;
+            background: red;
+            font: bold;
+        }
+        .sale{
+            grid-area: sale;
+            background: rgb(31, 5, 5);
+            font: bold;
+            color: #f4f4f4;
+        }
+        .category{
+            grid-area:category;
+            background: #bdbabad8;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: bisque;
+        }
+        .product{
+            grid-area: products;
+            background-color: #f4f4f4;
+            display: grid;
+            grid-template-columns:repeat(2, 1fr) ;
+            gap: 5px;
+        }
+        .card{
+            background-color: #cccc;
+        }
+        button {
+          padding: 8px 16px;
+          border: none;
+          background: #3fd9a5;
+          color: white;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        button:hover {
+          background: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">MY E-commerce Website</div>
+        <div class="sale">🔥50% Sale 🔥</div>
+        <div class="category"></div>
+        <div class="products">
+            
+            <div class="card"></div>
+        </div>
+        <div class="footer">©️ All Copyrights Reserved</div>
+    </div>
+</body>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smartphones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="card-img" src="ultra.webp" alt="Flagship Phone">
+            <h2>ULTRA PRO</h2>
+            <p>Latest flagship smartphone</p>
+            <p class="price">$799.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="phone.webp" alt="Midrange Phone">
+            <h2>MIDRANGE X</h2>
+            <p>Best value smartphone</p>
+            <p class="price">$499.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="gaming.webp" alt="Gaming Phone">
+            <h2>GAMER PHONE</h2>
+            <p>120Hz gaming smartphone</p>
+            <p class="price">$649.99</p>
+        </div>
+        <div class="card">
+            <img class="card-img" src="fold.webp" alt="Foldable Phone">
+            <h2>FOLD PRO</h2>
+            <p>Foldable display smartphone</p>
+            <p class="price">$999.99</p>
+        </div>
+    </div>
+</body>
+</html>
