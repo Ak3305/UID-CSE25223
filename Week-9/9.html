@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Logic Programs</title> 
+    <style> 
+    body { 
+        margin: 0; 
+        font-family: Arial, sans-serif; 
+        background: #e6ecf5; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh; 
+    } 
+    .container { 
+        background: #ffffff; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2); 
+        padding: 40px; 
+        width: 380px; 
+        text-align: center; 
+    } 
+    h2 { 
+        margin-bottom: 20px; 
+        color: #2c3e50; 
+    } 
+    input { 
+        width: 100%; 
+        padding: 10px; 
+        font-size: 16px; 
+        border: 2px solid #a7b6c7; 
+        border-radius: 8px; 
+        margin-bottom: 20px; 
+        box-sizing: border-box; 
+        text-align: center; 
+   
+    
+   
+    
+        background: #f8fbff;
+        color: #333;
+    } 
+    input:focus { 
+        outline: none; 
+        border-color: #5b8def; 
+    } 
+    .buttons { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 12px; 
+        margin-bottom: 24px; 
+    } 
+    button { 
+        padding: 12px; 
+        font-size: 15px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        color: white; 
+        font-weight: bold; 
+        background: #5b8def; 
+        transition: opacity 0.2s; 
+    } 
+    button:hover { opacity: 0.85; } 
+    .output { 
+        background: #eef3f8; 
+       
+        padding: 20px; 
+        border-radius: 8px; 
+        min-height: 60px; 
+        color: #2f3b45; 
+        font-size: 16px; 
+        border: 1px solid #c9d6e2;
+    } 
+    </style> 
+  </head> 
+  <body> 
+ 
+    <div class="container"> 
+        <h2>Logic Programs</h2> 
+        <input type="number" id="numInput" placeholder="Enter a number" /> 
+        <div class="buttons"> 
+            <button onclick="checkEvenOdd()">Even / Odd</button> 
+            <button onclick="checkPrime()">Prime / Not</button> 
+   
+    
+   
+    
+            <button onclick="calcFactorial()">Factorial</button> 
+            <button onclick="checkArmstrong()">Armstrong</button> 
+        </div> 
+        <div class="output" id="output">Result will appear here</div> 
+    </div> 
+    <script> 
+        function getInput() { 
+            const val = document.getElementById('numInput').value.trim(); 
+            if (val === '' || isNaN(val)) { 
+                document.getElementById('output').textContent = 'Please enter a valid number.'; 
+                return null; 
+            } 
+            return parseInt(val); 
+        } 
+        function setOutput(text) { 
+            document.getElementById('output').textContent = text; 
+        } 
+        function checkEvenOdd() { 
+            const n = getInput(); 
+            if (n === null) return; 
+            setOutput(n + ' is ' + (n % 2 === 0 ? 'Even' : 'Odd')); 
+        } 
+        function checkPrime() { 
+            const n = getInput(); 
+            if (n === null) return; 
+            if (n < 2) { setOutput(n + ' is Not Prime'); return; } 
+            for (let i = 2; i <= Math.sqrt(n); i++) { 
+                if (n % i === 0) { setOutput(n + ' is Not Prime'); return; } 
+            } 
+            setOutput(n + ' is Prime'); 
+        } 
+        function calcFactorial() { 
+            const n = getInput(); 
+            if (n === null) return; 
+            if (n < 0) { setOutput('Factorial not defined for negative numbers'); return; } 
+            let result = 1; 
+            for (let i = 2; i <= n; i++) result *= i; 
+            setOutput(n + '! = ' + result); 
+        } 
+        function checkArmstrong() { 
+            const n = getInput(); 
+            if (n === null) return; 
+            const digits = String(n).split(''); 
+            const power  = digits.length; 
+            const sum    = digits.reduce((acc, d) => acc + Math.pow(Number(d), power), 0); 
+            setOutput(n + (sum === n ? ' is an Armstrong number' : ' is Not an Armstrong number')); 
+        } 
+    </script> 
+</body> 
+</html>

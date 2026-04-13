@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logic Programs</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            height: 100vh;
+            background: #edf2f7;
+        }
+        .left {
+            width: 30%;
+            background: #dbeafe;
+            padding: 20px;
+            border-right: 3px solid #93c5fd;
+        }
+        .right {
+            width: 70%;
+            background: #f8fafc;
+            padding: 20px;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #1f2937;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #2563eb;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        #output {
+            background: #eff6ff;
+            padding: 20px;
+            min-height: 200px;
+            white-space: pre-line;
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+<div class="left">
+    <h3>Enter Input</h3>
+    <input type="text" id="numbers" placeholder="Click a button to see input format">
+    <button onclick="signProduct()">Sign of Product</button>
+    <button onclick="sortNumbers()">Sort Numbers</button>
+    <button onclick="largestNumber()">Largest Number</button>
+    <button onclick="oddEvenLoop()">Odd / Even 0-15</button>
+    <button onclick="studentGrade()">Student Grade</button>
+</div>
+<div class="right">
+    <h3>Output</h3>
+    <div id="output">Result will appear here</div>
+</div>
+<script>
+function getNumbers() {
+    let input = document.getElementById("numbers").value;
+    return input.split(",").map(Number);
+}
+function signProduct() {
+    let input = document.getElementById("numbers").value;
+    if (input === "") {
+        document.getElementById("output").textContent =
+        "Enter 3 numbers like: 0,-1,4";
+        return;
+    }
+    let nums = getNumbers();
+    let negative = 0;
+    for (let n of nums) {
+        if (n < 0) negative++;
+    }
+    let result = (negative % 2 == 0) ? "+1" : "-1";
+    alert(result);
+    document.getElementById("output").textContent = "Sign: " + result;
+}
+function sortNumbers() {
+    let input = document.getElementById("numbers").value;
+    if (input === "") {
+        document.getElementById("output").textContent =
+        "Enter 3 numbers like: 0,-1,4";
+        return;
+    }
+    let nums = getNumbers();
+    nums.sort((a, b) => b - a);
+    alert(nums.join(", "));
+    document.getElementById("output").textContent =
+    "Sorted: " + nums.join(", ");
+}
+function largestNumber() {
+    let input = document.getElementById("numbers").value;
+    if (input === "") {
+        document.getElementById("output").textContent =
+        "Enter 5 numbers like: -5,-2,-6,0,-1";
+        return;
+    }
+    let nums = getNumbers();
+    let max = nums[0];
+    for (let n of nums) {
+        if (n > max) max = n;
+    }
+    alert("Largest: " + max);
+    document.getElementById("output").textContent =
+    "Largest: " + max;
+}
+function oddEvenLoop() {
+    let input = document.getElementById("numbers").value;
+    if (input === "") {
+        document.getElementById("output").textContent =
+        "Enter a number like: 15 (to check from 0 to that number)";
+        return;
+    }
+    let n = Number(input);
+    let result = "";
+    for (let i = 0; i <= n; i++) {
+        if (i % 2 == 0)
+            result += i + " is Even\n";
+        else
+            result += i + " is Odd\n";
+    }
+    document.getElementById("output").textContent = result;
+}
+function studentGrade() {
+    let input = document.getElementById("numbers").value;
+    if (input === "") {
+        document.getElementById("output").textContent =
+        "Enter 6 subject marks like: 70,80,90,60,75,85";
+        return;
+    }
+    let nums = getNumbers();
+    let sum = 0;
+    for (let n of nums) sum += n;
+    let avg = sum / nums.length;
+    let grade;
+    if (avg >= 90) grade = "A";
+    else if (avg >= 75) grade = "B";
+    else if (avg >= 60) grade = "C";
+    else grade = "D";
+    alert("Average: " + avg + " Grade: " + grade);
+    document.getElementById("output").textContent =
+    "Average: " + avg + " | Grade: " + grade;
+}
+</script>
+</body>
+</html>
