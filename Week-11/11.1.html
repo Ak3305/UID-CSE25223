@@ -1,0 +1,41 @@
+<html> 
+<head> 
+<title>Username Check</title> 
+<style> 
+body { 
+  margin:0; 
+  font-family: Arial; 
+  background: linear-gradient(120deg,#2980b9,#6dd5fa); 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  height:100vh; 
+} 
+.card { 
+  background:white; 
+  padding:30px; 
+  border-radius:12px; 
+  width:300px; 
+  box-shadow:0 10px 25px rgba(0,0,0,0.2); 
+} 
+input { width:100%; padding:10px; margin-top:10px; } 
+</style> 
+</head> 
+<body> 
+<div class="card"> 
+<h2>Username</h2> 
+<input type="text" id="username" placeholder="Enter username" 
+onkeyup="checkUsername()"> 
+<p id="msg"></p> 
+</div> 
+<script> 
+function checkUsername() { 
+ let val=document.getElementById("username").value; 
+ let msg=document.getElementById("msg"); 
+ if(val.length<5){ msg.innerText="Minimum 5 characters required"; 
+msg.style.color="red"; } 
+ else{ msg.innerText="Valid username"; msg.style.color="green"; } 
+} 
+</script> 
+</body> 
+</html> 

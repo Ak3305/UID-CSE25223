@@ -1,0 +1,35 @@
+<html> 
+<head> 
+<title>Email Validation</title> 
+<style> 
+body{margin:0;font-family:Arial;background:linear
+gradient(120deg,#ff6a00,#ee0979);display:flex;justify-content:center;align-items:center;height:100vh;} 
+.card{background:white;padding:30px;border-radius:12px;width:320px;box-shadow:0 
+10px 25px rgba(0,0,0,0.2);} 
+input,button{width:100%;padding:10px;margin-top:10px;} 
+button{background:#ee0979;color:white;border:none;cursor:pointer;} 
+</style> 
+</head> 
+<body> 
+<div class="card"> 
+<h2>Email Check</h2> 
+<form onsubmit="return validateEmail()"> 
+<input type="text" id="email" placeholder="Enter Email"> 
+<button type="submit">Submit</button> 
+</form> 
+</div> 
+<script> 
+function validateEmail(){ 
+    let email=document.getElementById("email").value; 
+    let pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+    if(pattern.test(email)){ 
+    alert("Email is valid"); 
+    return true; 
+    }else{ 
+    alert("Invalid Email"); 
+    return false; 
+    } 
+} 
+</script> 
+</body> 
+</html> 
