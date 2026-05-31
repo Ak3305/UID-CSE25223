@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma | Electronics & Appliances</title>
+  <!-- Link to the separate stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-main">
+      <!-- Icon: Menu -->
+      <button class="menu-btn" onclick="toggleMenu()" id="Menu">
+        <img src="menu.png" alt="Menu" class="icon"> 
+      </button>
+      <p for="Menu">Menu</p>
+      <a href="#" class="logo">A<span>roma</span></a>
+      
+      <div class="search-box">
+        <input type="text" placeholder="What are you looking for?">
+        <!-- Icon: Search -->
+        <button>
+          <img src="search.png" alt="Search" class="icon">
+        </button>
+      </div>
+      
+      <div class="header-icons">
+        <!-- Icons: Location, User, Cart -->
+        <a href="#"><img src="location.png" alt="Location" class="icon"></a>
+        <a href="#"><img src="user-icon.png" alt="Account" class="icon"></a>
+        <a href="#"><img src="cart.png" alt="Cart" class="icon"></a>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu-left">
+        <h3>Shop by Category</h3>
+        <div class="mega-menu-item highlight">Top Brands <span>›</span></div>
+        <div class="mega-menu-item">Televisions & Accessories <span>›</span></div>
+        <div class="mega-menu-item">Home Appliances <span>›</span></div>
+        <div class="mega-menu-item">Phones & Wearables <span>›</span></div>
+        <div class="mega-menu-item">Computers & Tablets <span>›</span></div>
+      </div>
+      <div class="brand-grid">
+        <a href="#">Samsung</a>
+        <a href="#">Apple</a>
+        <a href="#">Sony</a>
+        <a href="#">LG</a>
+        <a href="#">Bose</a>
+        <a href="#">Dell</a>
+        <a href="#">HP</a>
+        <a href="#">Canon</a>
+        <a href="#">Daikin</a>
+        <a href="#">Dyson</a>
+        <a href="#">Faber</a>
+        <a href="#">Google</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1400&q=80')">
+          <div class="slide-content"><h1>Premium Headphones</h1><a href="#" class="slide-btn">Shop Now</a></div>
+        </div>
+        <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1400&q=80')">
+          <div class="slide-content"><h1>Smart TVs</h1><a href="#" class="slide-btn">Explore</a></div>
+        </div>
+        <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1400&q=80')">
+          <div class="slide-content"><h1>Laptops & More</h1><a href="#" class="slide-btn">View All</a></div>
+        </div>
+        <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1400&q=80')">
+          <div class="slide-content"><h1>Latest Smartphones</h1><a href="#" class="slide-btn">Shop Phones</a></div>
+        </div>
+      </div>
+      <!-- Icons: Arrows -->
+      <button class="carousel-arrow prev" onclick="changeSlide(-1)"><img src="arrow-left.png" alt="Prev" class="icon"></button>
+      <button class="carousel-arrow next" onclick="changeSlide(1)"><img src="arrow-right.png" alt="Next" class="icon"></button>
+      <div class="carousel-bars" id="carouselBars">
+        <div class="carousel-bar active" onclick="goToSlide(0)"><div class="bar-progress"></div></div>
+        <div class="carousel-bar" onclick="goToSlide(1)"><div class="bar-progress"></div></div>
+        <div class="carousel-bar" onclick="goToSlide(2)"><div class="bar-progress"></div></div>
+        <div class="carousel-bar" onclick="goToSlide(3)"><div class="bar-progress"></div></div>
+      </div>
+    </section>
+
+    <!-- Bank Offers -->
+    <section class="section">
+      <h2 class="section-title">Exciting Bank Offers For You</h2>
+      <div class="bank-marquee">
+        <div class="bank-track">
+          <div class="bank-card"><img src="hdfc.webp"></div>
+          <div class="bank-card"><img src="idfc.webp" alt="Offer"></div>
+          <div class="bank-card"><img src="axis.webp" alt="Offer"></div>
+          <div class="bank-card"><img src="HSBC.png" alt="Offer"></div>
+          <div class="bank-card"><img src="AU.webp" alt="Offer"></div>
+          <!-- Duplicated for seamless loop -->
+          <div class="bank-card"><img src="hdfc.webp"></div>
+          <div class="bank-card"><img src="idfc.webp" alt="Offer"></div>
+          <div class="bank-card"><img src="axis" alt="Offer"></div>
+          <div class="bank-card"><img src="HSBC.png" alt="Offer"></div>
+          <div class="bank-card"><img src="AU.webp" alt="Offer"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Roller -->
+    <section class="section">
+      <div class="scroll-container">
+        <button class="scroll-arrow-btn left" onclick="scrollSection('categories',-1)"><img src="arrow-left.png" alt="Left" class="icon"></button>
+        <div class="scroll-wrapper" id="categories">
+          <div class="category-tile"><img src="thumbnail.webp" alt="Mobiles"><span>Mobiles</span></div>
+          <div class="category-tile"><img src="thumbnail1.webp" alt="TVs"><span>Televisions</span></div>
+          <div class="category-tile"><img src="thumbnail2.webp" alt="Laptops"><span>Laptops</span></div>
+          <div class="category-tile"><img src="thumbnail3.webp" alt="ACs"><span>Air Conditioners</span></div>
+          <div class="category-tile"><img src="thumbnail4.webp" alt="Coolers"><span>Coolers</span></div>
+          <div class="category-tile"><img src="thumbnail5.webp" alt="Fans"><span>Fans</span></div>
+          <div class="category-tile"><img src="thumbnail6.webp" alt="Fridges"><span>Refrigerators</span></div>
+          <div class="category-tile"><img src="thumbnail7.webp" alt="Headphones"><span>Headphones</span></div>
+          <div class="category-tile"><img src="thumbnail8.webp" alt="Kitchen"><span>Kitchen</span></div>
+          <div class="category-tile"><img src="thumbnail9.webp" alt="Grooming"><span>Grooming</span></div>
+        </div>
+        <button class="scroll-arrow-btn right" onclick="scrollSection('categories',1)"><img src="arrow-right.png" alt="Right" class="icon"></button>
+      </div>
+    </section>
+
+    <!-- Deals of the Day -->
+    <section class="section">
+      <h2 class="section-title">Deals Of The Day</h2>
+      <div class="deals-grid">
+        <div class="promo-card"><img src="deals1.webp" alt=""></div>
+        <div class="promo-card"><img src="deals2.webp" alt=""></div>
+        <div class="promo-card"><img src="deals3.webp" alt=""></div>
+        <div class="promo-card"><img src="deals4.webp" alt=""></div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <!-- Wishlist Icon (Outline/Filled logic handled in JS) -->
+          <span class="wishlist-btn" onclick="toggleWishlist(this)">
+            <img src="heart.png" alt="Wishlist" class="icon wishlist-icon">
+          </span>
+          <img src="product1.webp" alt="Product 1">
+          <h3 class="product-title">Premium Wireless Headphones Noise Cancelling</h3>
+          <div class="product-price">₹12,590 <span class="original">₹16,000</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="product-card">
+          <span class="wishlist-btn" onclick="toggleWishlist(this)">
+            <img src="heart.png" alt="Wishlist" class="icon wishlist-icon">
+          </span>
+          <img src="product2.jpg" alt="">
+          <h3 class="product-title">Smart Watch Pro Series 8 GPS</h3>
+          <div class="product-price">₹24,999 <span class="original">₹29,999</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="product-card">
+          <span class="wishlist-btn" onclick="toggleWishlist(this)">
+            <img src="heart.png" alt="Wishlist" class="icon wishlist-icon">
+          </span>
+          <img src="product3.webp" alt="Product 3">
+          <h3 class="product-title">4K Ultra HD Smart TV 55 Inch</h3>
+          <div class="product-price">₹39,990 <span class="original">₹49,990</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="product-card">
+          <span class="wishlist-btn" onclick="toggleWishlist(this)">
+            <img src="heart.png" alt="Wishlist" class="icon wishlist-icon">
+          </span>
+          <img src="product4.jpg" alt="Product 4">
+          <h3 class="product-title">Gaming Laptop RTX 4060 16GB RAM</h3>
+          <div class="product-price">84,990 <span class="original">₹94,990</span></div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- From Aroma to You -->
+    <section class="section">
+      <h2 class="section-title">From Aroma to You</h2>
+      <div class="deals-grid">
+        <div class="promo-card"><img src="you1.webp" alt=""></div>
+        <div class="promo-card"><img src="you2.webp" alt=""></div>
+        <div class="promo-card"><img src="you3.webp" alt=""></div>
+        <div class="promo-card"><img src="you4.webp" alt=""></div>
+      </div>
+    </section>
+
+    <!-- Why Aroma? -->
+    <section class="why-aroma">
+      <h2 class="section-title">Why Aroma?</h2>
+      <img src="Why Croma.webp" alt="">
+    </section>
+
+    <!-- Brand Strip -->
+    <section class="section">
+      <div class="scroll-container">
+        <button class="scroll-arrow-btn left" onclick="scrollSection('brands',-1)"><img src="arrow-left.png" alt="Left" class="icon"></button>
+        <div class="scroll-wrapper" id="brands">
+          <div class="brand-tile"><img src="apple.webp" alt="Apple"></div>
+          <div class="brand-tile"><img src="bose.webp" alt="Bose"></div>
+          <div class="brand-tile"><img src="Croma.webp" alt="Croma"></div>
+          <div class="brand-tile"><img src="dell.webp" alt="Dell"></div>
+          <div class="brand-tile"><img src="Haier.webp" alt="Haier"></div>
+          <div class="brand-tile"><img src="JBL.webp" alt="JBL"></div>
+          <div class="brand-tile"><img src="Lenovo.webp" alt="Lenovo"></div>
+          <div class="brand-tile"><img src="HP.webp" alt="HP"></div>
+        </div>
+        <button class="scroll-arrow-btn right" onclick="scrollSection('brands',1)"><img src="arrow-right.png" alt="Right" class="icon"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>About Aroma</h4>
+        <a href="#">Our Story</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Sustainability</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <a href="#">Help Center</a><a href="#">Track Order</a><a href="#">Returns & Refunds</a><a href="#">Warranty Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Student Store</a><a href="#">EMI Options</a><a href="#">Store Locator</a><a href="#">Gift Cards</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a><a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Aroma Electronics Pvt. Ltd. All rights reserved.</p>
+      <p>Student educational project. Not affiliated with Croma, Tata, or any real retailer.</p>
+    </div>
+  </footer>
+
+  <!-- Link to the separate JS file -->
+  <script src="function.js" defer></script>
+</body>
+</html>
